@@ -1,0 +1,47 @@
+GET     api/pt/email                   params: email
+GET     api/pt/all
+GET     api/pt/patients                params: pt_id
+GET     api/pt/summary                 params: pt
+GET     api/pt/patient-activity        params: pt, patient
+GET     api/pt/workouts                params: pt
+GET     api/pt/exercises               params: workout
+POST    api/pt/register                params: email, password, f_name, l_name, company
+POST    api/pt/login                   params: email, password
+POST    api/pt/assign                  params: workout[], patient[], pt
+POST    api/pt/create                  params: title, pt, exercise_id[], description[]
+
+### This branch is for PT message creation/retrieval
+GET     api/pt/message/id              params: pt, patient
+POST    api/pt/message/register        params: message, pt, patient
+
+GET     api/patient/id                 params: patient_id
+GET     api/patient/all
+POST    api/patient/register           params: email, password, f_name, l_name, company
+PUT     api/patient/update-pt          params: patient_id, pt, prospective_pt
+
+GET     api/patient/entry/id           params: entry_id
+GET     api/patient/entry/all          params: patient_id
+POST    api/patient/entry/register     params: entry, patient_id
+
+GET     api/patient/workout/id         params: patient
+GET     api/patient/video/id           params: patient
+POST    api/patient/video/register     params: video_url, patient
+
+GET     api/activity/id                params: pt, patient
+GET     api/activity/all
+POST    api/activity/register          params: type_activity, duration, pt, patient
+
+GET     api/assign/id                  params: patient
+GET     api/assign/all                 params: patient
+
+### This branch is for patient message creation/retrieval
+### POST is replaced by an automatic SQL trigger for testing messaging functionality
+GET     api/message/id                 params: pt, patient
+POST    api/message/id                 params: message, pt, patient
+
+GET     api/workout/id                 params: workout_id
+GET     api/exercise/all               params: none, for library page
+
+TEST ENDPOINTS
+GET     api/database/version
+GET     api/example/user

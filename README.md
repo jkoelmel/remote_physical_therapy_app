@@ -1,2 +1,7 @@
-# remote_physical_therapy_app
-Created by my SE team using React, Redux, Node.js, Java Spark, MySQL, and deployed via AWS backend and GH pages for static service of pages
+# CSC648-Team2
+
+Team Lead: Jarett Koelmel  
+Front-end: Michael Canson (Lead), Paul Borst, Chiu Wong  
+Back-end: Brooke Porter (Lead), Eric Chen
+Git Master: Eric Chen  
+SCRUM Master: Jarett Koelmel
